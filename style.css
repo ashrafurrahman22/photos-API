@@ -3,3 +3,6 @@
         margin-right: 40%;
         padding: 20px;
 }
+#spinner {
+        display: none;
+}

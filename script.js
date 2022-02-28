@@ -1,7 +1,13 @@
 const photosDiv = document.getElementById('photos');
 const detailsDiv = document.getElementById('details');
 
-const loadPhotos = () => {
+const tooggleSpinner = (displayStyle) =>  {
+        document.getElementById('spinner').style = displayStyle;
+}
+
+const loadPhotos = () => {   
+
+
     const url = `https://jsonplaceholder.typicode.com/photos`
     fetch(url)
     .then(res => res.json())
@@ -11,10 +17,9 @@ const loadPhotos = () => {
 
 const displayPhotos = (photos) => {
     // for(const photo of photos) {}
+  
 
-    photos.forEach(photo => {
-
-      
+    photos.forEach(photo => {      
         detailsDiv.textContent = '';
         photosDiv.style.display = 'block'
 
