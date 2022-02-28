@@ -1,4 +1,10 @@
-#details {
-        text-align: center;
+#container{
+        margin-left: 36%;
+        margin-right: 40%;
+        padding: 20px;
+}
 
+#container-div{
+        display: grid;
+        grid-template-columns: repeat(3);
 }

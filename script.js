@@ -18,14 +18,15 @@ const displayPhotos = (photos) => {
 
         const newDiv = document.createElement('div');
     newDiv.innerHTML = `
-    <div class="card" style="width: 18rem;">
-  <img src="${photo.thumbnailUrl}" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Id: ${photo.id}</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <button onclick="photoDetails(${photo.id})" class="bg-primary p-2 text-white rounded-3">Check Details</button>
-  </div>
-</div>    <br> <br>
+   <div id="container-div" class="card" style="width: 18rem;">
+   <img src="${photo.thumbnailUrl}" class="card-img-top" alt="...">
+   <div class="card-body">
+     <h5 class="card-title">Id: ${photo.id}</h5>
+     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+     <button onclick="photoDetails(${photo.id})" class="bg-primary p-2 text-white rounded-3">Check Details</button>
+   </div>
+ </div>  
+  <br> <br>
     `;
     photosDiv.appendChild(newDiv);
 // console.log(photo);
