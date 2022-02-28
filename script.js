@@ -10,15 +10,18 @@ const loadPhotos = () => {
 
 
 const displayPhotos = (photos) => {
-    for(const photo of photos) {
+    // for(const photo of photos) {}
 
+    photos.forEach(photo => {
+
+      
         detailsDiv.textContent = '';
         photosDiv.style.display = 'block'
 
 
         const newDiv = document.createElement('div');
     newDiv.innerHTML = `
-   <div id="container-div" class="card" style="width: 18rem;">
+   <div  class="card text-center" style="width: 18rem;">
    <img src="${photo.thumbnailUrl}" class="card-img-top" alt="...">
    <div class="card-body">
      <h5 class="card-title">Id: ${photo.id}</h5>
@@ -29,10 +32,11 @@ const displayPhotos = (photos) => {
   <br> <br>
     `;
     photosDiv.appendChild(newDiv);
-// console.log(photo);
-
+        // console.log(photo);
+      });
     }   
-}
+
+
 
 const photoDetails = info => {
     const url2 = `https://jsonplaceholder.typicode.com/photos/${info}`
@@ -44,7 +48,7 @@ const photoDetails = info => {
 const displayDetails = details => {
     const newDiv2 = document.createElement('div');
     newDiv2.innerHTML = `
-    <div class="card" style="width: 18rem;">
+    <div class="card text-center" style="width: 18rem;">
   <img src="${details.thumbnailUrl}" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">Id: ${details.id}</h5>
